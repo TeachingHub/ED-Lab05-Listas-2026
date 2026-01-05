@@ -1,0 +1,10 @@
+GPATH 
+GRTAGS
+GTAGS
+*.o
+*.exe
+*.ppu
+*.pdb
+*.obj
+.DS_Store
+.vscode/

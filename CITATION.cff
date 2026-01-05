@@ -1,0 +1,37 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Ejercicios de Listas en Pascal
+message: >-
+  Estructuras de Datos. Grado en Ingeniería
+  del Software. Universidad Rey Juan Carlos. 
+type: software
+authors:
+  - given-names: 'Sergio '
+    family-names: Cavero
+    email: sergio.cavero@urjc.es
+    affiliation: Universidad Rey Juan Carlos
+    orcid: 'https://orcid.org/0000-0002-5258-5915'
+  - given-names: Salvador
+    family-names: 'Sanchez-Alonso '
+    orcid: 'https://orcid.org/0000-0002-9949-4797'
+    affiliation: Universidad Rey Juan Carlos
+    email: salvador.sanchez@urjc.es
+repository-code: >-
+  https://github.com/TeachingHub/ED-Lab05-Listas-Template
+abstract: >-
+  Enunciados de ejercicios de Listas en Pascal en
+  distintos grados de dificultad. Desde problemas más
+  sencillos para conocer el funcionamiento de una lista, 
+  pasando por ejercicios en los que hay que modificar ligeramente 
+  la estructura de la lista para almacenar registros o realizar ejercicios
+  basados en el recorrido de la pila, hasta llegar a ejercicios más completos 
+  que requieres de un dominio tanto de las lista como de otras TADs.
+keywords:
+  - pascal
+  - data-estructures
+  - pointers
+  - teaching
+  - Linked-Lists
+license: MIT
