@@ -170,9 +170,8 @@ implementation
             rec_in_list := true
         else
         begin
-            resto := list;
-            resto.first := list.first^.sig;
-            rec_in_list := rec_in_list(resto, x); // Llamada recursiva con el resto de la lista
+            resto.first := list.first^.sig; // Resto de la lista
+            rec_in_list := rec_in_list(resto, x); // Llamada recursiva
         end;
     end;
 
