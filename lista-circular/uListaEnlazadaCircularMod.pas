@@ -93,41 +93,60 @@ implementation
         end;
     end;
 
-    procedure delete(var list: tListaCircular; x: integer);
+   procedure delete(var list: tListaCircular; x: integer);
     var
-        aux, prev: ^nodo;
+        current, prev: ^nodo;
         found: boolean;
     begin
+        // Caso 1: Lista vacía (no hacemos nada)
         if not is_empty(list) then
         begin
-            found := false;
-            aux := list.last^.sig;
-            prev := list.last;
-            while (aux <> list.last) and not found do
+            // Caso 2a: Un único nodo en la lista
+            if list.last^.sig = list.last then
             begin
-                if aux^.info = x then
-                    found := true
-                else
+                if list.last^.info = x then // Si el único nodo es el que queremos eliminar
                 begin
-                    prev := aux;
-                    aux := aux^.sig;
+                    dispose(list.last);
+                    list.last := nil;
                 end;
-            end;
-            if aux^.info = x then
+            end
+            else 
             begin
-                if aux = list.last then
+                // Caso 2b: Más de un nodo, buscamos el elemento
+                found := false;
+                prev := list.last;      // El anterior al primero es el último
+                current := list.last^.sig;  // Empezamos a buscar por el primero
+                
+                repeat // Recorremos con un do-while en vez de un while para asegurar 
+                       // que se revise el último nodo. 
+                       // Se podría usar un while y añadir una condición extra para revisar
+                       // el último nodo después del ciclo.
+                    if current^.info = x then // Marco como encontrado el nodo a eliminar
+                        found := true
+                    else 
+                    begin
+                        prev := current; // Avanzo el puntero del nodo anterior
+                        current := current^.sig;
+                    end;
+                until found or (current = list.last^.sig); // Paramos si lo encontramos o si damos la vuelta completa
+                
+                // Si existe, lo eliminamos
+                if found then
                 begin
-                    if aux = prev then // Caso especial: Lista con un solo nodo
-                        list.last := nil // La lista queda vacía
-                    else
-                        list.last := prev; // Caso general: Se elimina el último nodo
+                    // Desenlazamos el nodo (el anterior apunta al siguiente del nodo a borrar)
+                    prev^.sig := current^.sig;
+
+                    // Si borramos el último nodo, actualizamos el puntero last al anterior
+                    if current = list.last then
+                        list.last := prev;
+                        
+                    dispose(current); // Siempre lo hacemos
                 end;
-                if list.last <> nil then // Asegurarse de que la lista no esté vacía después de la posible actualización de last
-                    prev^.sig := aux^.sig;
-                dispose(aux);
             end;
         end;
     end;
+
+
 
     function in_list(list: tListaCircular; x: integer): boolean;
     var
