@@ -73,7 +73,7 @@ Para ello, se proporciona el código de la lista enlazada simple en el archivo `
 En este ejercicio, trabajaremos con operaciones básicas de la lista enlazada simple.
 
 - `uListaEnlazadaSimple.pas`: Implementación de la lista enlazada simple. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. No debes modificar este archivo.
-- `listas_ej1.pas`: Programa principal que utiliza la lista enlazada simple. Este es el fichero en el que deberás realizar las implementaciones necesarias.
+- `listas_ej2.pas`: Programa principal que utiliza la lista enlazada simple. Este es el fichero en el que deberás realizar las implementaciones necesarias.
 
 ¿Qué rol tendremos en este ejercicio? Estaremos utilizando la lista enlazada simple para realizar operaciones básicas y por lo tanto, tendremos el "rol" de usuario del TAD, no de implementador. No modificaremos la implementación de la lista enlazada simple, sino que utilizaremos las operaciones básicas que nos proporciona.
 
