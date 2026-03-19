@@ -1,4 +1,4 @@
-unit uListaEnlazadaSimple;
+unit uListaEnlazadaSimpleMod;
 
 interface
 
