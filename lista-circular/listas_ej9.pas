@@ -1,4 +1,4 @@
-program listas_ej12;
+program listas_ej9;
 
 uses uListaEnlazadaCircular;
 
