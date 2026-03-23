@@ -57,7 +57,7 @@ begin
 
     // Test 1: Lista con varios elementos
     crear_lista_circular_1(lista); // lista = [1, 2, 3, 4, 5]
-    WriteLn('  Test 1: Lista con 5 elementos.');
+    WriteLn('  Test 1: Lista con 5 elementos.', to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -67,7 +67,7 @@ begin
 
     // Test 2: Lista con menos elementos
     crear_lista_circular_2(lista); // lista = [10, 20]
-    WriteLn('  Test 2: Lista con 2 elementos.');
+    WriteLn('  Test 2: Lista con 2 elementos.', to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -77,7 +77,7 @@ begin
 
     // Test 3: Lista con elementos repetidos
     crear_lista_circular_3(lista); // lista = [7, 7, 7]
-    WriteLn('  Test 3: Lista con elementos repetidos (3 elementos).');
+    WriteLn('  Test 3: Lista con elementos repetidos (3 elementos).', to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -87,7 +87,7 @@ begin
 
     // Test 4: Lista vacía
     crear_lista_circular_vacia(lista); // lista = []
-    WriteLn('  Test 4: Lista vacía.');
+    WriteLn('  Test 4: Lista vacía.', to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -97,7 +97,7 @@ begin
 
     // Test 5: Lista con un solo elemento
     crear_lista_circular_4(lista); // lista = [1]
-    WriteLn('  Test 5: Lista con un solo elemento.');
+    WriteLn('  Test 5: Lista con un solo elemento.', to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -108,7 +108,7 @@ begin
     // Test 6: Lista vacía después de eliminar elementos
     crear_lista_circular_1(lista); // lista = [1, 2, 3, 4, 5]
     clear(lista); // lista = []
-    WriteLn('  Test 6: Lista vacía después de clear().');
+    WriteLn('  Test 6: Lista vacía después de clear().' , to_string(lista));
     elems_iterativo := num_elems(lista);
     elems_recursivo := num_elems_rec(lista);
     resultado_test := (elems_iterativo = elems_recursivo);
@@ -129,7 +129,7 @@ begin
 
     // Test 1: Lista con varios elementos
     crear_lista_circular_1(lista); // lista = [1, 2, 3, 4, 5]
-    WriteLn('  Test 1: Lista con 5 elementos.');
+    WriteLn('  Test 1: Lista con 5 elementos. ', to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
@@ -139,7 +139,7 @@ begin
 
     // Test 2: Lista con menos elementos
     crear_lista_circular_2(lista); // lista = [10, 20]
-    WriteLn('  Test 2: Lista con 2 elementos.');
+    WriteLn('  Test 2: Lista con 2 elementos. ', to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
@@ -149,7 +149,7 @@ begin
 
     // Test 3: Lista con elementos repetidos
     crear_lista_circular_3(lista); // lista = [7, 7, 7]
-    WriteLn('  Test 3: Lista con elementos repetidos (3 elementos).');
+    WriteLn('  Test 3: Lista con elementos repetidos (3 elementos).', to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
@@ -159,7 +159,7 @@ begin
 
     // Test 4: Lista vacía
     crear_lista_circular_vacia(lista); // lista = []
-    WriteLn('  Test 4: Lista vacía.');
+    WriteLn('  Test 4: Lista vacía.', to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
@@ -169,7 +169,7 @@ begin
 
     // Test 5: Lista con un solo elemento
     crear_lista_circular_4(lista); // lista = [1]
-    WriteLn('  Test 5: Lista con un solo elemento.');
+    WriteLn('  Test 5: Lista con un solo elemento.', to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
@@ -180,7 +180,7 @@ begin
     // Test 6: Lista vacía después de eliminar elementos
     crear_lista_circular_1(lista); // lista = [1, 2, 3, 4, 5]
     clear(lista); // lista = []
-    WriteLn('  Test 6: Lista vacía después de clear().');
+    WriteLn('  Test 6: Lista vacía después de clear().' , to_string(lista));
     str_iterativo := to_string(lista);
     str_recursivo := to_string_rec(lista);
     resultado_test := (str_iterativo = str_recursivo);
