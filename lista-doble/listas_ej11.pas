@@ -1,7 +1,7 @@
 program listas_ej11;
 
 uses
-  uListaEnlazadaDobleGetAt,
+  uListaEnlazadaDobleGetAt, // Asegúrate de que la unidad uListaEndalazadaDoble esté disponible
   SysUtils;
 
 function bool_to_str(b: boolean): string;
@@ -35,7 +35,7 @@ var
 begin
   WriteLn('Test get_at: Lista vacia');
   crear_lista_vacia(list);
-  valor_obtenido := get_at(list, 1);
+  valor_obtenido := get_at(list, 1); // Corregido: Llamada a get_at con 2 parámetros
   // No deberia devolver nada, pero no se puede verificar
   WriteLn(' Valor obtenido = ', valor_obtenido); // Sera un valor aleatorio
 end;
@@ -52,13 +52,13 @@ var
 begin
   WriteLn('Test get_at: Posicion 1');
   crear_lista_con_elementos(list);
-  valor_obtenido := get_at(list, 1); 
+  valor_obtenido := get_at(list, 1); // Corregido: Llamada a get_at con 2 parámetros
   resultado := IntToStr(valor_obtenido);
   esperado_valor := 1;
   esperado_exito := True;
   WriteLn(' Lista: ', to_string(list));
   WriteLn('  Resultado valor = ', resultado, ', Esperado valor = ', IntToStr(esperado_valor), ', Test Valor: ', bool_to_str(valor_obtenido = esperado_valor));
-  exito := (valor_obtenido = esperado_valor); 
+  exito := (valor_obtenido = esperado_valor); // Corregido: Asignación de exito
   WriteLn('  Resultado exito = ', bool_to_str(exito), ', Esperado exito = ', bool_to_str(esperado_exito) , ', Test Exito: ', bool_to_str(exito = esperado_exito));
 end;
 
@@ -73,13 +73,13 @@ var
 begin
   WriteLn('Test get_at: Posicion media');
   crear_lista_con_elementos(list);
-  valor_obtenido := get_at(list, 2); 
+  valor_obtenido := get_at(list, 2); // Corregido: Llamada a get_at con 2 parámetros
   resultado := IntToStr(valor_obtenido);
   esperado_valor := 2;
   esperado_exito := True;
   WriteLn(' Lista: ', to_string(list));
   WriteLn('  Resultado valor = ', resultado, ', Esperado valor = ', IntToStr(esperado_valor), ', Test Valor: ', bool_to_str(valor_obtenido = esperado_valor));
-  exito := (valor_obtenido = esperado_valor); 
+  exito := (valor_obtenido = esperado_valor); // Corregido: Asignación de exito
   WriteLn('  Resultado exito = ', bool_to_str(exito), ', Esperado exito = ', bool_to_str(esperado_exito) , ', Test Exito: ', bool_to_str(exito = esperado_exito));
 end;
 
@@ -94,13 +94,13 @@ var
 begin
   WriteLn('Test get_at: Posicion final');
   crear_lista_con_elementos(list);
-  valor_obtenido := get_at(list, 3); 
+  valor_obtenido := get_at(list, 3); // Corregido: Llamada a get_at con 2 parámetros
   resultado := IntToStr(valor_obtenido);
   esperado_valor := 3;
   esperado_exito := True;
   WriteLn(' Lista: ', to_string(list));
   WriteLn('  Resultado valor = ', resultado, ', Esperado valor = ', IntToStr(esperado_valor), ', Test Valor: ', bool_to_str(valor_obtenido = esperado_valor));
-  exito := (valor_obtenido = esperado_valor); 
+  exito := (valor_obtenido = esperado_valor); // Corregido: Asignación de exito
   WriteLn('  Resultado exito = ', bool_to_str(exito), ', Esperado exito = ', bool_to_str(esperado_exito) , ', Test Exito: ', bool_to_str(exito = esperado_exito));
 end;
 
@@ -115,13 +115,13 @@ var
 begin
   WriteLn('Test 1 get_at: Posicion fuera de rango (mayor)');
   crear_lista_con_elementos(list);
-  valor_obtenido := get_at(list, 4); 
+  valor_obtenido := get_at(list, 4); // Corregido: Llamada a get_at con 2 parámetros
   // No deberia devolver nada, pero no se puede verificar
   WriteLn(' Valor obtenido = ', valor_obtenido);
 
   WriteLn('Test 2 get_at: Posicion fuera de rango (menor)');
   crear_lista_con_elementos(list);
-  valor_obtenido := get_at(list, 0);
+  valor_obtenido := get_at(list, 0); // Corregido: Llamada a get_at con 2 parámetros
   // No deberia devolver nada, pero no se puede verificar
   WriteLn(' Valor obtenido = ', valor_obtenido);
 end;
