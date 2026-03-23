@@ -32,7 +32,7 @@ begin
   valorFueraRango := MAX_RANGE + 10; // Un valor fuera del rango
 
   // Prueba 1: Inicialización y comprobación de lista vacía
-  WriteLn('#1Prueba 1: Inicialización y comprobación de lista vacía');
+  WriteLn('Prueba 1: Inicialización y comprobación de lista vacía');
   initialize(lista);
   WriteLn('- Es vacía: ', is_empty(lista), ' = true', #9, showOkWrong(is_empty(lista) = true));
   
